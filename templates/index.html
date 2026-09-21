@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emotion Detector</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='mywebscript.js') }}"></script>
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif; margin: 40px; }
+        h1 { color: #0f62fe; }
+        textarea { width: 100%; max-width: 600px; height: 120px; padding: 8px; }
+        button { margin-top: 12px; padding: 8px 20px; cursor: pointer; }
+        #system_response { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Emotion Detector</h1>
+    <p>Type a statement below and run the sentiment analysis.</p>
+    <textarea id="textToAnalyze" placeholder="Type your text here..."></textarea>
+    <br>
+    <button class="btn btn-primary" onclick="RunSentimentAnalysis()">Run Sentiment Analysis</button>
+    <div id="system_response"></div>
+</body>
+</html>
